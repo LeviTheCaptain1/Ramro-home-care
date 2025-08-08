@@ -3,28 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ramro Home Care LLC – Compassionate Non-Medical Home Care</title>
+<title>Contact Ramro Home Care LLC</title>
 <style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-    margin: 0; padding: 0;
-  }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f4f8;
     color: #333;
+    margin: 0;
     line-height: 1.6;
   }
-  a {
-    color: #1e90ff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Header */
   header {
     background: #2a9df4;
     color: white;
@@ -33,17 +20,9 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   }
   header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    font-weight: 700;
+    margin: 0;
+    font-size: 2.5rem;
   }
-  header p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* Navigation */
   nav {
     background: #0d47a1;
     display: flex;
@@ -53,76 +32,64 @@
   nav a {
     color: white;
     padding: 15px 20px;
-    display: inline-block;
+    text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s ease;
     border-radius: 4px 4px 0 0;
+    display: inline-block;
   }
   nav a:hover,
   nav a.active {
     background-color: #1565c0;
   }
-
-  /* Hero Section */
-  .hero {
-    background: url('https://images.unsplash.com/photo-1588776814546-c03f42e39f0d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    font-size: 1.3rem;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  }
-
-  /* Main Content */
   main {
-    max-width: 1000px;
+    max-width: 600px;
     margin: 40px auto;
-    padding: 0 20px;
-  }
-  h2 {
-    color: #2a9df4;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
-
-  /* Services Grid */
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 20px;
-  }
-  .service-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-  }
-  .service-card h3 {
-    margin-bottom: 12px;
-    color: #1565c0;
-  }
-  .service-card p {
-    color: #555;
-  }
-
-  /* About Section */
-  .about {
-    margin-top: 50px;
     background: white;
     padding: 30px 25px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   }
-  .about p {
-    margin-bottom: 15px;
+  h2 {
+    color: #2a9df4;
+    margin-bottom: 25px;
   }
-
-  /* Footer */
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+  form input:focus, form textarea:focus {
+    border-color: #2a9df4;
+    outline: none;
+  }
+  form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button {
+    background: #2a9df4;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #1a6ddb;
+  }
   footer {
     background: #0d47a1;
     color: white;
@@ -131,16 +98,10 @@
     margin-top: 60px;
     font-size: 0.9rem;
   }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .hero {
-      font-size: 1rem;
-      padding: 50px 15px;
+  @media (max-width: 650px) {
+    main {
+      margin: 20px 10px;
+      padding: 20px 15px;
     }
   }
 </style>
@@ -148,64 +109,42 @@
 <body>
 
 <header>
-  <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
+  <h1>Contact Ramro Home Care LLC</h1>
 </header>
 
 <nav>
-  <a href="index.html" class="active">Home</a>
+  <a href="index.html">Home</a>
   <a href="search.html">Search</a>
-  <a href="contact.html">Contact Us</a>
+  <a href="contact.html" class="active">Contact Us</a>
 </nav>
 
-<section class="hero">
-  Supporting independence and well-being with caring home assistance.
-</section>
-
 <main>
-  <section>
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Personal Care Assistance</h3>
-        <p>Help with bathing, dressing, grooming, and daily hygiene to keep your loved ones comfortable and confident.</p>
-      </div>
-      <div class="service-card">
-        <h3>Companionship</h3>
-        <p>Providing emotional support and engaging activities to brighten each day.</p>
-      </div>
-      <div class="service-card">
-        <h3>Medication Reminders</h3>
-        <p>Ensuring medications are taken on time, helping maintain health and safety.</p>
-      </div>
-      <div class="service-card">
-        <h3>Meal Preparation</h3>
-        <p>Preparing nutritious meals tailored to dietary needs and preferences.</p>
-      </div>
-      <div class="service-card">
-        <h3>Light Housekeeping</h3>
-        <p>Keeping the home clean and organized for a safe living environment.</p>
-      </div>
-      <div class="service-card">
-        <h3>Transportation</h3>
-        <p>Safe rides to appointments, errands, and social activities.</p>
-      </div>
-      <div class="service-card">
-        <h3>24/7 Care</h3>
-        <p>Around-the-clock non-medical support to provide peace of mind.</p>
-      </div>
-    </div>
-  </section>
+  <h2>Get in Touch</h2>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label for="firstName">First Name *</label>
+    <input type="text" id="firstName" name="firstName" required />
 
-  <section class="about">
-    <h2>About Ramro Home Care LLC</h2>
-    <p>We believe everyone deserves to live with dignity and independence in their own home. Ramro Home Care LLC offers personalized non-medical care services designed to support seniors and individuals who need assistance with daily living activities.</p>
-    <p>Our caregivers are carefully selected, trained, and committed to delivering compassionate care with respect and kindness. Whether you need temporary help or long-term support, we’re here to make life easier and more joyful for your loved ones.</p>
-  </section>
+    <label for="lastName">Last Name *</label>
+    <input type="text" id="lastName" name="lastName" required />
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="_replyto" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" />
+
+    <label for="zip">Zip Code</label>
+    <input type="text" id="zip" name="zip" />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 </main>
 
 <footer>
-  &copy; 2025 Ramro Home Care LLC &nbsp;|&nbsp; <a href="contact.html" style="color:#aad4ff;">Contact Us</a>
+  &copy; 2025 Ramro Home Care LLC. All rights reserved.
 </footer>
 
 </body>
