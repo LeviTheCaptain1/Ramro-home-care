@@ -3,20 +3,107 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ramro Home Care LLC - Contact Us</title>
+<title>Contact Ramro Home Care LLC</title>
 <style>
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
-  header, footer { background: #2c3e50; color: white; padding: 20px 0; text-align: center; }
-  nav { background: #34495e; display: flex; justify-content: center; }
-  nav a { color: white; text-decoration: none; margin: 0 15px; padding: 14px 20px; display: inline-block; }
-  nav a:hover { background: #2c3e50; }
-  main { max-width: 600px; margin: 40px auto; padding: 0 20px; }
-  h2 { color: #2c3e50; }
-  .contact-person { background: white; padding: 15px 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  .contact-person h3 { margin-top: 0; }
-  .contact-info { margin: 5px 0; }
-  a { color: #2980b9; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+  }
+  header {
+    background: #2a9df4;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  nav {
+    background: #0d47a1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px 4px 0 0;
+    display: inline-block;
+  }
+  nav a:hover,
+  nav a.active {
+    background-color: #1565c0;
+  }
+  main {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    color: #2a9df4;
+    margin-bottom: 25px;
+  }
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+  form input:focus, form textarea:focus {
+    border-color: #2a9df4;
+    outline: none;
+  }
+  form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button {
+    background: #2a9df4;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #1a6ddb;
+  }
+  footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 650px) {
+    main {
+      margin: 20px 10px;
+      padding: 20px 15px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -28,21 +115,32 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="search.html">Search</a>
-  <a href="contact.html">Contact Us</a>
+  <a href="contact.html" class="active">Contact Us</a>
 </nav>
 
 <main>
-  <section class="contact-person">
-    <h2>Mukti Katel</h2>
-    <p class="contact-info"><strong>Phone:</strong> <a href="tel:+15156391858">515-639-1858</a></p>
-    <p class="contact-info"><strong>Email:</strong> <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a></p>
-  </section>
+  <h2>Get in Touch</h2>
+  <form action="https://formspree.io/f/mjkopddq" method="POST">
+    <label for="firstName">First Name *</label>
+    <input type="text" id="firstName" name="firstName" required />
 
-  <section class="contact-person">
-    <h2>Kailash Gajmer</h2>
-    <p class="contact-info"><strong>Phone:</strong> <a href="tel:+15039336975">503-933-6975</a></p>
-    <p class="contact-info"><strong>Email:</strong> <a href="mailto:gajmerkailash@gmail.com">gajmerkailash@gmail.com</a></p>
-  </section>
+    <label for="lastName">Last Name *</label>
+    <input type="text" id="lastName" name="lastName" required />
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="_replyto" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" />
+
+    <label for="zip">Zip Code</label>
+    <input type="text" id="zip" name="zip" />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
 </main>
 
 <footer>
