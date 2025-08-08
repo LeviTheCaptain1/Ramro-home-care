@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ramro Home Care LLC - Search</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
+  header, footer { background: #2c3e50; color: white; padding: 20px 0; text-align: center; }
+  nav { background: #34495e; display: flex; justify-content: center; }
+  nav a { color: white; text-decoration: none; margin: 0 15px; padding: 14px 20px; display: inline-block; }
+  nav a:hover { background: #2c3e50; }
+  main { max-width: 600px; margin: 40px auto; padding: 0 20px; text-align: center; }
+  input[type="text"] { width: 80%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+  button { padding: 10px 20px; font-size: 16px; margin-left: 10px; background: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #34495e; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Search Ramro Home Care Services</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="search.html">Search</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<main>
+  <input type="text" id="searchInput" placeholder="Search services or info..." />
+  <button onclick="doSearch()">Search</button>
+  <p id="searchResult" style="margin-top:20px;"></p>
+</main>
+
+<footer>
+  &copy; 2025 Ramro Home Care LLC. All rights reserved.
+</footer>
+
+<script>
+  const services = [
+    "Personal Care Assistance",
+    "Companionship",
+    "Medication Reminders",
+    "24/7 Care",
+    "Home Safety",
+    "Transportation Support",
+  ];
+
+  function doSearch() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const results = services.filter(service => service.toLowerCase().includes(input));
+    const resultEl = document.getElementById('searchResult');
+    if (!input) {
+      resultEl.textContent = "Please enter a search term.";
+      return;
+    }
+    if (results.length === 0) {
+      resultEl.textContent = "No results found.";
+    } else {
+      resultEl.textContent = "Results: " + results.join(", ");
+    }
+  }
+</script>
+
+</body>
+</html>
