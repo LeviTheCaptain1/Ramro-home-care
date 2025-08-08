@@ -73,6 +73,30 @@
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   }
 
+  /* Search Section */
+  .search-section {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .search-section input[type="search"] {
+    padding: 12px 18px;
+    width: 280px;
+    max-width: 90%;
+    border-radius: 25px;
+    border: 2px solid #2a9df4;
+    font-size: 1rem;
+  }
+  .search-section button {
+    padding: 12px 25px;
+    background:#2a9df4;
+    color:white;
+    border:none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
   /* Main Content */
   main {
     max-width: 1000px;
@@ -154,12 +178,17 @@
 
 <nav>
   <a href="index.html" class="active">Home</a>
-  <a href="search.html">Search</a>
   <a href="contact.html">Contact Us</a>
 </nav>
 
 <section class="hero">
   Supporting independence and well-being with caring home assistance.
+</section>
+
+<!-- Search Bar -->
+<section class="search-section">
+  <input type="search" id="globalSearch" placeholder="Search services, info, contacts..." onkeydown="if(event.key === 'Enter') performSearch();" />
+  <button onclick="performSearch()">Search</button>
 </section>
 
 <main>
@@ -207,6 +236,26 @@
 <footer>
   &copy; 2025 Ramro Home Care LLC &nbsp;|&nbsp; <a href="contact.html" style="color:#aad4ff;">Contact Us</a>
 </footer>
+
+<script>
+function performSearch() {
+  const query = document.getElementById('globalSearch').value.trim().toLowerCase();
+  if(!query) {
+    alert('Please enter a search term.');
+    return;
+  }
+  
+  if(query.includes('contact') || query.includes('phone') || query.includes('email')) {
+    window.location.href = 'contact.html';
+    return;
+  }
+  if(query.includes('care') || query.includes('services') || query.includes('home care')) {
+    alert('You are already on the Home page describing our services.');
+    return;
+  }
+  alert(`No results found for "${query}". Try searching "contact" or "care".`);
+}
+</script>
 
 </body>
 </html>
