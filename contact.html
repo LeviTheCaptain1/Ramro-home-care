@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Ramro Home Care LLC</title>
+  <title>Contact Us - Ramro Home Care LLC</title>
+
   <style>
-    /* Global Styles */
+    /* === SHARED STYLES START === */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f8fb;
@@ -13,8 +14,6 @@
       margin: 0;
       line-height: 1.6;
     }
-
-    /* Header */
     header {
       background: #1976d2;
       color: white;
@@ -23,8 +22,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     header h1 { margin: 0; font-size: 2.5rem; }
-
-    /* Navigation */
+    header p { margin-top: 8px; font-size: 1.1rem; }
     nav {
       background: #0d47a1;
       display: flex;
@@ -39,8 +37,31 @@
       border-radius: 4px 4px 0 0;
     }
     nav a:hover, nav a.active { background-color: #1565c0; }
-
-    /* Main Content */
+    .hero {
+      position: relative;
+      background-image: url('https://images.pexels.com/photos/29494789/pexels-photo-29494789.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
+    .hero-content p { margin: 0; font-size: 1.15rem; }
     main {
       max-width: 700px;
       margin: 40px auto;
@@ -48,11 +69,13 @@
       padding: 30px 25px;
       border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 2;
     }
     main p { font-size: 1.05rem; margin-bottom: 20px; }
-    h2 { color: #1565c0; margin-bottom: 20px; }
-
-    /* Forms */
+    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 10px; }
+    .members p { margin-bottom: 12px; }
+    .members strong { font-size: 1.1rem; }
     form label {
       display: block;
       margin-bottom: 6px;
@@ -88,7 +111,6 @@
       transition: background-color 0.3s ease;
     }
     button:hover { background: #1565c0; }
-
     #thank-you-message {
       display: none;
       padding: 20px;
@@ -100,8 +122,6 @@
       text-align: center;
       margin-top: 30px;
     }
-
-    /* Footer */
     footer {
       background: #0d47a1;
       color: white;
@@ -110,19 +130,21 @@
       margin-top: 60px;
       font-size: 0.9rem;
     }
-
-    /* Responsive */
     @media (max-width: 650px) {
+      .hero { height: 200px; }
+      .hero-content h2 { font-size: 1.9rem; }
       main { margin: 20px 10px; padding: 20px 15px; }
       nav { flex-wrap: wrap; gap: 10px; padding-bottom: 10px; }
       nav a { padding: 10px; }
     }
+    /* === SHARED STYLES END === */
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Contact Ramro Home Care LLC</h1>
+  <h1>Ramro Home Care LLC</h1>
+  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
 </header>
 
 <nav>
@@ -130,34 +152,28 @@
   <a href="contact.html" class="active">Contact Us</a>
 </nav>
 
+<section class="hero">
+  <div class="hero-content">
+    <h2>Contact Us</h2>
+    <p>We’re here to answer your questions and provide support</p>
+  </div>
+</section>
+
 <main>
-  <h2>We're Here to Help</h2>
-  <p>
-    If you or a loved one are looking for compassionate, professional home care, please don't hesitate to reach out. Fill out the form below, and our team will respond within 24 hours.
-  </p>
-
   <form id="contact-form">
-    <label for="firstName">First Name *</label>
-    <input type="text" id="firstName" name="firstName" required />
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
 
-    <label for="lastName">Last Name *</label>
-    <input type="text" id="lastName" name="lastName" required />
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
 
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="_replyto" required />
-
-    <label for="phone">Phone Number *</label>
-    <input type="tel" id="phone" name="phone" required />
-
-    <label for="message">Message *</label>
+    <label for="message">Your Message</label>
     <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Send Message</button>
   </form>
 
-  <div id="thank-you-message">
-    Thank you for contacting us. We’ll get back to you within 24 hours.
-  </div>
+  <div id="thank-you-message">Thank you for contacting us! We’ll get back to you soon.</div>
 </main>
 
 <footer>
@@ -165,30 +181,11 @@
 </footer>
 
 <script>
-  const form = document.getElementById('contact-form');
-  const thankYouMessage = document.getElementById('thank-you-message');
-
-  form.addEventListener('submit', async (e) => {
+  // Simple form submission handler
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch('https://formspree.io/f/mjkopddq', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      });
-
-      if (response.ok) {
-        form.reset();
-        thankYouMessage.style.display = 'block';
-      } else {
-        alert('There was a problem submitting the form. Please try again.');
-      }
-    } catch (error) {
-      alert('Something went wrong. Please try again later.');
-    }
+    this.style.display = 'none';
+    document.getElementById('thank-you-message').style.display = 'block';
   });
 </script>
 
