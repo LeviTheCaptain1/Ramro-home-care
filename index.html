@@ -3,256 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ramro Home Care LLC – Compassionate Non-Medical Home Care</title>
+  <title>Ramro Home Care LLC</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
-    }
+    /* Your styling here */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7fafc;
+      background: #f0f4f8;
       color: #333;
-      line-height: 1.7;
+      margin: 0;
+      line-height: 1.6;
     }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover, a:focus {
-      text-decoration: underline;
-    }
-
     header {
-      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      background: #2a9df4;
       color: white;
-      padding: 40px 20px 30px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 2.5rem;
     }
-    header p {
-      font-size: 1.3rem;
-      max-width: 650px;
-      margin: 0 auto;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-
     nav {
-      background: #2563eb;
+      background: #0d47a1;
       display: flex;
       justify-content: center;
-      gap: 35px;
-      padding: 12px 0;
+      gap: 30px;
     }
     nav a {
       color: white;
-      padding: 12px 28px;
+      padding: 15px 20px;
+      text-decoration: none;
       font-weight: 600;
-      border-radius: 6px 6px 0 0;
-      font-size: 1.05rem;
+      border-radius: 4px 4px 0 0;
+      display: inline-block;
     }
-    nav a:hover, nav a.active {
-      background-color: #1e40af;
-      color: #a5b4fc;
+    nav a:hover,
+    nav a.active {
+      background-color: #1565c0;
     }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1588776814546-c03f42e39f0d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: 500;
-      position: relative;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(38, 78, 162, 0.75);
-      z-index: 0;
-    }
-    .hero > * {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
     main {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-
-    h2 {
-      color: #2563eb;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      font-weight: 700;
-      border-bottom: 3px solid #3b82f6;
-      padding-bottom: 10px;
-    }
-
-    .about, .contact-form {
+      max-width: 700px;
+      margin: 40px auto;
       background: white;
       padding: 30px 25px;
       border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      margin-top: 40px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
-
-    .about p + p, .services p + p {
-      margin-top: 18px;
+    h2 {
+      color: #2a9df4;
+      margin-bottom: 15px;
     }
-
-    .services p {
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.8;
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 30px;
     }
-
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 20px;
-      border: 1.5px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-family: inherit;
-    }
-
-    form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    button {
-      background: #2a9df4;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 15px 25px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    #thank-you-message {
-      display: none;
-      padding: 20px;
-      background-color: #e0f7fa;
-      border: 1.5px solid #81d4fa;
-      border-radius: 8px;
-      color: #0077c2;
-      font-weight: 600;
-      text-align: center;
-      margin-top: 30px;
-    }
-
     footer {
-      background: #1e40af;
+      background: #0d47a1;
       color: white;
       text-align: center;
-      padding: 25px 15px;
-      font-size: 1rem;
+      padding: 20px 10px;
       margin-top: 60px;
+      font-size: 0.9rem;
     }
-
-    footer a {
-      color: #a5b4fc;
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px 0;
-      }
-      .hero {
-        font-size: 1.1rem;
-        padding: 70px 20px;
+    @media (max-width: 650px) {
+      main {
+        margin: 20px 10px;
+        padding: 20px 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ramro Home Care LLC</h1>
-    <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
-  </header>
+<header>
+  <h1>Ramro Home Care LLC</h1>
+  <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
+</header>
 
-  <nav>
-    <a href="#home" class="active">Home</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
 
-  <section id="home" class="hero">
-    Supporting independence and well-being with caring home assistance.
+<main>
+  <h2>Supporting independence and well-being with caring home assistance.</h2>
+  
+  <section>
+    <h3>Our Services</h3>
+    <p>
+      At Ramro Home Care LLC, we offer a range of compassionate, non-medical home care services tailored to each individual's needs. These include: personal care assistance, companionship, medication reminders, meal preparation, light housekeeping, safe transportation, and 24/7 care. Our goal is to help your loved ones live safely and comfortably in their own home with dignity and independence.
+    </p>
   </section>
 
-  <main>
-    <section class="services" aria-label="Our Home Care Services">
-      <h2>Our Services</h2>
-      <p>
-        At Ramro Home Care LLC, we offer a range of compassionate, non-medical home care services tailored to each individual's needs. These include:
-        personal care assistance, companionship, medication reminders, meal preparation, light housekeeping, safe transportation, and 24/7 care. 
-        Our goal is to help your loved ones live safely and comfortably in their own home with dignity and independence.
-      </p>
-    </section>
+  <section>
+    <h3>About Us</h3>
+    <p>
+      We believe everyone deserves to live with dignity and independence in their own home. Ramro Home Care LLC provides personalized support for seniors and individuals with daily living challenges.
+    </p>
+    <p>
+      Our carefully selected caregivers are trained and committed to delivering respectful, compassionate care. Whether you need short-term assistance or long-term support, we’re here to make life safer and more joyful for your loved ones.
+    </p>
+  </section>
+</main>
 
-    <section class="about" aria-label="About Ramro Home Care LLC">
-      <h2>About Us</h2>
-      <p>
-        We believe everyone deserves to live with dignity and independence in their own home. Ramro Home Care LLC provides personalized support for seniors and individuals with daily living challenges.
-      </p>
-      <p>
-        Our carefully selected caregivers are trained and committed to delivering respectful, compassionate care. Whether you need short-term assistance or long-term support, we’re here to make life safer and more joyful for your loved ones.
-      </p>
-    </section>
+<footer>
+  &copy; 2025 Ramro Home Care LLC. All rights reserved.
+</footer>
 
-    <section id="contact" class="contact-form" aria-label="Contact Us">
-      <h2>Contact Us</h2>
-      <p>
-        If you or a loved one are looking for compassionate, professional home care, please don’t hesitate to reach out. Fill out the form below, and a member of our team will respond within 24 hours.
-      </p>
-
-      <form id="contact-form">
-        <label for="firstName">First Name *</label>
-        <input type="text" id="firstName" name="firstName" required />
-
-        <label for="lastName">Last Name *</label>
-        <input type="text" id="lastName" name="lastName" required />
-
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="_replyto" required />
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" />
-
-        <label for="zip">Zip Code</label>
-        <input type="text" id="zip" name="zip" />
-
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-
-      <div id="thank-you-message">
-        Thank you for contacting us
+</body>
+</html>
