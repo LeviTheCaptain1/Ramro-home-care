@@ -12,24 +12,15 @@
       margin: 0;
       line-height: 1.6;
     }
-
     header {
-      background: #1976d2;
+      background: #2a9df4;
       color: white;
-      padding: 40px 20px 20px;
+      padding: 30px 20px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin-top: 8px; font-size: 1.1rem; }
 
     nav {
       background: #0d47a1;
@@ -37,19 +28,44 @@
       justify-content: center;
       gap: 30px;
     }
-
     nav a {
       color: white;
       padding: 15px 20px;
       text-decoration: none;
       font-weight: 600;
       border-radius: 4px 4px 0 0;
-      display: inline-block;
+    }
+    nav a:hover, nav a.active {
+      background-color: #1565c0;
     }
 
-    nav a:hover,
-    nav a.active {
-      background-color: #1565c0;
+    .hero {
+      position: relative;
+      background: url('https://i.imgur.com/yourImageHash.png') center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(38, 78, 162, 0.5);
+      mix-blend-mode: overlay;
+    }
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 {
+      font-size: 2.4rem;
+      color: #f4f8fb;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     main {
@@ -58,32 +74,19 @@
       background: white;
       padding: 30px 25px;
       border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
     }
-
-    h2 {
-      color: #1976d2;
-      margin-bottom: 20px;
-    }
-
     h3 {
       color: #1565c0;
       margin-top: 30px;
       margin-bottom: 10px;
     }
-
     p {
       font-size: 1.05rem;
       margin-bottom: 20px;
     }
-
-    .members p {
-      margin-bottom: 14px;
-    }
-
-    .members strong {
-      font-size: 1.1rem;
-    }
+    .members p { margin-bottom: 14px; }
+    .members strong { font-size: 1.1rem; }
 
     footer {
       background: #0d47a1;
@@ -95,10 +98,11 @@
     }
 
     @media (max-width: 650px) {
-      main {
-        margin: 20px 10px;
-        padding: 20px 15px;
-      }
+      .hero { padding: 90px 15px 60px; }
+      .hero h2 { font-size: 1.9rem; }
+      main { margin: 20px 10px; padding: 20px 15px; }
+      nav { flex-direction: column; gap: 0; }
+      nav a { padding: 12px; }
     }
   </style>
 </head>
@@ -106,7 +110,7 @@
 
 <header>
   <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
+  <p>Compassionate Non‑Medical Home Care Services Tailored for Your Loved Ones</p>
 </header>
 
 <nav>
@@ -114,24 +118,27 @@
   <a href="contact.html">Contact Us</a>
 </nav>
 
+<section class="hero">
+  <h2>Care That Feels Like Home</h2>
+  <p>Rooted in empathy and respect, we bring compassionate care to your doorstep.</p>
+</section>
+
 <main>
-  <h2>Welcome to Ramro Home Care</h2>
-  <p>
-    We believe everyone deserves to live with dignity, comfort, and independence in their own home.
-    Ramro Home Care LLC offers personalized non-medical support to seniors and individuals who need assistance with daily life.
-  </p>
+  <section>
+    <h3>About Us</h3>
+    <p>
+      Ramro Home Care LLC delivers personalized, respectful non‑medical support to seniors and individuals, helping them live with comfort and dignity at home.
+    </p>
+  </section>
 
   <section class="members">
     <h3>Managing Members</h3>
     <p><strong>Mukti Katel</strong><br />
-      Phone: <a href="tel:5156391858">515-639-1858</a><br />
-      Email: <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a>
-    </p>
-
+      Phone: <a href="tel:5156391858">515‑639‑1858</a><br />
+      Email: <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a></p>
     <p><strong>Kailash Gajmer</strong><br />
-      Phone: <a href="tel:5039336975">503-933-6975</a><br />
-      Email: <a href="mailto:gajmerkailash@gmail.com">gajmerkailash@gmail.com</a>
-    </p>
+      Phone: <a href="tel:5039336975">503‑933‑6975</a><br />
+      Email: <a href="mailto:gajmerkailash@gmail.com">gajmerkailash@gmail.com</a></p>
   </section>
 </main>
 
