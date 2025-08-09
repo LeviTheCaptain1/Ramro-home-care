@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ramro Home Care LLC</title>
+
   <style>
-    /* Global Styles */
+    /* === SHARED STYLES START === */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f8fb;
@@ -13,8 +14,6 @@
       margin: 0;
       line-height: 1.6;
     }
-
-    /* Header */
     header {
       background: #1976d2;
       color: white;
@@ -24,8 +23,6 @@
     }
     header h1 { margin: 0; font-size: 2.5rem; }
     header p { margin-top: 8px; font-size: 1.1rem; }
-
-    /* Navigation */
     nav {
       background: #0d47a1;
       display: flex;
@@ -40,8 +37,6 @@
       border-radius: 4px 4px 0 0;
     }
     nav a:hover, nav a.active { background-color: #1565c0; }
-
-    /* Hero Section */
     .hero {
       position: relative;
       background-image: url('https://images.pexels.com/photos/29494789/pexels-photo-29494789.jpeg');
@@ -67,8 +62,6 @@
     }
     .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
     .hero-content p { margin: 0; font-size: 1.15rem; }
-
-    /* Main Content */
     main {
       max-width: 700px;
       margin: 40px auto;
@@ -81,12 +74,54 @@
     }
     main p { font-size: 1.05rem; margin-bottom: 20px; }
     h3 { color: #1565c0; margin-top: 30px; margin-bottom: 10px; }
-
-    /* Members Section */
     .members p { margin-bottom: 12px; }
     .members strong { font-size: 1.1rem; }
-
-    /* Footer */
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      border-color: #1976d2;
+      outline: none;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      background: #1976d2;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover { background: #1565c0; }
+    #thank-you-message {
+      display: none;
+      padding: 20px;
+      background-color: #e0f7fa;
+      border: 1.5px solid #81d4fa;
+      border-radius: 8px;
+      color: #0077c2;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 30px;
+    }
     footer {
       background: #0d47a1;
       color: white;
@@ -95,8 +130,6 @@
       margin-top: 60px;
       font-size: 0.9rem;
     }
-
-    /* Responsive */
     @media (max-width: 650px) {
       .hero { height: 200px; }
       .hero-content h2 { font-size: 1.9rem; }
@@ -104,6 +137,7 @@
       nav { flex-wrap: wrap; gap: 10px; padding-bottom: 10px; }
       nav a { padding: 10px; }
     }
+    /* === SHARED STYLES END === */
   </style>
 </head>
 <body>
