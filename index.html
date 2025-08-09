@@ -4,80 +4,177 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ramro Home Care LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Your styling here */
+    /* Colors inspired by Nepal flag + warm homey tones */
+    :root {
+      --red: #e03c31;      /* Nepal flag red */
+      --blue: #003893;     /* Nepal flag blue */
+      --warm-beige: #f8f1e7;
+      --warm-orange: #f28c28;
+      --dark-brown: #4b2e05;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      color: #333;
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--warm-beige);
+      color: var(--dark-brown);
       margin: 0;
       line-height: 1.6;
     }
     header {
-      background: #2a9df4;
+      background: var(--red);
       color: white;
       padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 1.1px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
+    header p {
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
     nav {
-      background: #0d47a1;
+      background: var(--blue);
       display: flex;
       justify-content: center;
       gap: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
     nav a {
       color: white;
       padding: 15px 20px;
       text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px 4px 0 0;
+      font-weight: 700;
+      border-radius: 8px 8px 0 0;
       display: inline-block;
+      transition: background-color 0.3s ease;
     }
     nav a:hover,
     nav a.active {
-      background-color: #1565c0;
+      background-color: var(--warm-orange);
+      color: var(--dark-brown);
+      font-weight: 800;
     }
+
+    /* Hero Section with Nepali Dhaka pattern background */
+    .hero {
+      background:
+        url('https://upload.wikimedia.org/wikipedia/commons/1/12/Nepali_Dhaka_Fabric_pattern.svg') repeat;
+      background-size: 60px 60px;
+      padding: 100px 20px 80px;
+      text-align: center;
+      color: var(--dark-brown);
+      font-family: 'Raleway', sans-serif;
+      box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.85);
+      border-radius: 0 0 50px 50px;
+      max-width: 900px;
+      margin: 40px auto 60px;
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto 35px;
+      font-weight: 600;
+    }
+    .btn-primary {
+      background-color: var(--warm-orange);
+      color: var(--dark-brown);
+      padding: 15px 35px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(242,140,40,0.5);
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #d37207;
+      box-shadow: 0 6px 12px rgba(211,114,7,0.6);
+    }
+
     main {
-      max-width: 700px;
-      margin: 40px auto;
       background: white;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #2a9df4;
-      margin-bottom: 15px;
+      max-width: 900px;
+      margin: 0 auto 80px;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      color: var(--dark-brown);
     }
     h3 {
-      color: #1565c0;
-      margin-top: 30px;
-      margin-bottom: 10px;
+      color: var(--red);
+      margin-top: 40px;
+      margin-bottom: 18px;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 0.8px;
     }
     p {
-      font-size: 1.05rem;
       margin-bottom: 20px;
+      line-height: 1.7;
     }
+
+    /* Managing members styling */
     .members p {
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+      font-weight: 600;
     }
+    .members a {
+      color: var(--warm-orange);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .members a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      background: #0d47a1;
+      background: var(--blue);
       color: white;
       text-align: center;
       padding: 20px 10px;
-      margin-top: 60px;
       font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.8px;
     }
+
     @media (max-width: 650px) {
       main {
-        margin: 20px 10px;
-        padding: 20px 15px;
+        margin: 20px 10px 60px;
+        padding: 25px 20px;
+        border-radius: 15px;
+      }
+      .hero {
+        padding: 80px 15px 60px;
+        border-radius: 0 0 30px 30px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      nav {
+        gap: 15px;
       }
     }
   </style>
@@ -94,20 +191,24 @@
   <a href="contact.html">Contact Us</a>
 </nav>
 
+<section class="hero">
+  <h2>Care That Feels Like Home</h2>
+  <p>Providing warm, personalized home care rooted in compassion and respect — just like family.</p>
+  <a href="contact.html" class="btn-primary">Contact Us Today</a>
+</section>
+
 <main>
-  <h2>Supporting independence and well-being with caring home assistance.</h2>
-  
   <section>
     <h3>Our Services</h3>
     <p>
-      At Ramro Home Care LLC, we offer compassionate, non-medical home care services tailored to individual needs, including personal care, companionship, medication reminders, meal prep, light housekeeping, safe transportation, and 24/7 care. Our goal is to help your loved ones live safely and comfortably at home with dignity and independence.
+      We offer personalized home care services including personal assistance, companionship, medication reminders, meal preparation, light housekeeping, safe transportation, and 24/7 support — all with dignity and respect.
     </p>
   </section>
 
   <section>
     <h3>About Us</h3>
     <p>
-      We provide personalized support to seniors and individuals facing daily living challenges with compassionate, respectful care.
+      Ramro Home Care LLC provides compassionate support to seniors and individuals with daily living needs. Our caregivers are committed to treating your loved ones like family, ensuring comfort and independence.
     </p>
   </section>
 
