@@ -20,12 +20,16 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    header h1 { margin: 0; font-size: 2.5rem; }
+    header h1 { margin: 0; font-size: 2.3rem; }
+    header p { margin-top: 8px; font-size: 1rem; }
+
+    /* NAVIGATION */
     nav {
       background: #0d47a1;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      align-items: center;
+      position: relative;
     }
     nav a {
       color: white;
@@ -35,12 +39,56 @@
       border-radius: 4px 4px 0 0;
     }
     nav a:hover, nav a.active { background-color: #1565c0; }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 50px;
+        overflow: hidden;
+        max-height: 60px;
+        transition: max-height 0.4s ease;
+      }
+      nav.open {
+        max-height: 300px;
+      }
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* HERO */
     .hero {
       position: relative;
       background-image: url('https://images.pexels.com/photos/29494789/pexels-photo-29494789.jpeg');
       background-size: cover;
       background-position: center;
-      height: 300px;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,8 +106,9 @@
       z-index: 1;
       padding: 20px;
     }
-    .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
-    .hero-content p { margin: 0; font-size: 1.15rem; }
+    .hero-content h2 { margin: 0 0 10px; font-size: 2.2rem; }
+
+    /* MAIN CONTENT */
     main {
       max-width: 700px;
       margin: 40px auto;
@@ -70,52 +119,44 @@
       position: relative;
       z-index: 2;
     }
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
+    main p { font-size: 1.05rem; margin-bottom: 20px; }
+    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 10px; }
+
+    /* FORM STYLING */
+    form {
+      display: grid;
+      gap: 15px;
     }
-    form input, form textarea {
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, textarea {
       width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 20px;
-      border: 1.5px solid #ccc;
+      padding: 10px;
+      border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
-      font-family: inherit;
-      transition: border-color 0.3s ease;
     }
-    form input:focus, form textarea:focus {
-      border-color: #1976d2;
-      outline: none;
-    }
-    form textarea {
+    textarea {
       resize: vertical;
-      min-height: 120px;
+      min-height: 100px;
     }
     button {
       background: #1976d2;
       color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 15px 25px;
+      padding: 12px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
     }
-    button:hover { background: #1565c0; }
-    #thank-you-message {
-      display: none;
-      padding: 20px;
-      background-color: #e0f7fa;
-      border: 1.5px solid #81d4fa;
-      border-radius: 8px;
-      color: #0077c2;
-      font-weight: 600;
-      text-align: center;
-      margin-top: 30px;
+    button:hover {
+      background: #0d47a1;
     }
+
     footer {
       background: #0d47a1;
       color: white;
@@ -124,59 +165,58 @@
       margin-top: 60px;
       font-size: 0.9rem;
     }
-    @media (max-width: 650px) {
-      .hero { height: 200px; }
-      .hero-content h2 { font-size: 1.9rem; }
-      main { margin: 20px 10px; padding: 20px 15px; }
-      nav { flex-wrap: wrap; gap: 10px; padding-bottom: 10px; }
-      nav a { padding: 10px; }
-    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
+  <p>Contact Us</p>
 </header>
 
-<nav>
+<div class="menu-toggle" id="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<nav id="navbar">
   <a href="index.html">Home</a>
   <a href="contact.html" class="active">Contact Us</a>
 </nav>
 
 <section class="hero">
   <div class="hero-content">
-    <h2>Contact Us</h2>
-    <p>We’re here to answer your questions and provide support</p>
+    <h2>Get in Touch</h2>
   </div>
 </section>
 
 <main>
+  <p>We’d love to hear from you! Please fill out the form below, and we’ll respond as soon as possible.</p>
+
   <form id="contact-form" action="https://formspree.io/f/mjkopddq" method="POST">
-    <label for="firstName">First Name *</label>
-    <input type="text" id="firstName" name="firstName" required />
+    <div>
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required />
+    </div>
 
-    <label for="lastName">Last Name *</label>
-    <input type="text" id="lastName" name="lastName" required />
+    <div>
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" required />
+    </div>
 
-    <label for="phone">Phone Number *</label>
-    <input type="tel" id="phone" name="phone" required />
+    <div>
+      <label for="email">Your Email *</label>
+      <input type="email" id="email" name="_replyto" required />
+    </div>
 
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="_replyto" required />
-
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <input type="hidden" name="_subject" value="New contact form submission from Ramro Home Care" />
+    <div>
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
 
     <button type="submit">Send Message</button>
   </form>
-
-  <div id="thank-you-message">
-    Thank you for contacting us! We’ll get back to you soon.
-  </div>
 </main>
 
 <footer>
@@ -184,31 +224,11 @@
 </footer>
 
 <script>
-  const form = document.getElementById('contact-form');
-  const thankYouMessage = document.getElementById('thank-you-message');
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      });
-
-      if (response.ok) {
-        form.reset();
-        form.style.display = 'none';
-        thankYouMessage.style.display = 'block';
-      } else {
-        alert('Oops! There was a problem submitting your form. Please try again.');
-      }
-    } catch (error) {
-      alert('Something went wrong submitting the form. Please try again later.');
-    }
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('open');
   });
 </script>
 
