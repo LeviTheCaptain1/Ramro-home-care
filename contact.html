@@ -1,180 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - Ramro Home Care LLC</title>
-  <style>
-    /* === GLOBAL STYLES === */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f8fb;
-      color: #333;
-      margin: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: #1976d2;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin-top: 8px; font-size: 1.1rem; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Ramro Home Care LLC</title>
+  <style>
+    /* === GLOBAL STYLES === */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f8fb;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #1976d2;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin-top: 8px; font-size: 1.1rem; }
 
-    /* NAVIGATION */
-    nav {
-      background: #0d47a1;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px 4px 0 0;
-    }
-    nav a:hover, nav a.active { background-color: #1565c0; }
+    /* NAVIGATION */
+    nav {
+      background: #0d47a1;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px 4px 0 0;
+    }
+    nav a:hover, nav a.active { background-color: #1565c0; }
 
-    /* HERO */
-    .hero {
-      position: relative;
-      background-image: url('caregiver.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; bottom: 0; right: 0;
-      background-color: rgba(0,0,0,0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
-    .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
-    .hero-content p { margin: 0; font-size: 1.15rem; }
+    /* HERO */
+    .hero {
+      position: relative;
+      background-image: url('caregiver.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
+    .hero-content p { margin: 0; font-size: 1.15rem; }
 
-    /* MAIN */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-    }
-    main p { font-size: 1.05rem; margin-bottom: 20px; }
-    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 20px; }
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    }
+    main p { font-size: 1.05rem; margin-bottom: 20px; }
+    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 20px; }
 
-    /* FORM */
-    form {
-      display: grid;
-      gap: 20px;
-    }
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: block;
-    }
-    input, textarea {
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
-    textarea { min-height: 120px; resize: vertical; }
-    button {
-      background: #1976d2;
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    button:hover { background: #1565c0; }
+    /* FORM */
+    form {
+      display: grid;
+      gap: 20px;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button {
+      background: #1976d2;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    button:hover { background: #1565c0; }
 
-    /* FOOTER */
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 60px;
-      font-size: 0.9rem;
-    }
+    /* FOOTER */
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
 
-    /* RESPONSIVE */
-    @media (max-width: 650px) {
-      .hero { height: 200px; }
-      .hero-content h2 { font-size: 1.9rem; }
-      main { margin: 20px 10px; padding: 20px 15px; }
-      nav { gap: 10px; padding-bottom: 10px; }
-      nav a { padding: 10px; }
-    }
-  </style>
+    /* RESPONSIVE */
+    @media (max-width: 650px) {
+      .hero { height: 200px; }
+      .hero-content h2 { font-size: 1.9rem; }
+      main { margin: 20px 10px; padding: 20px 15px; }
+      nav { gap: 10px; padding-bottom: 10px; }
+      nav a { padding: 10px; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
+  <h1>Ramro Home Care LLC</h1>
+  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
 </header>
 
 <nav>
-  <a href="/">Home</a>
-  <a href="contact.html" class="active">Contact Us</a>
+  <a href="/">Home</a>
+  <a href="contact.html" class="active">Contact Us</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Get in Touch</h2>
-    <p>We’d love to hear from you</p>
-  </div>
+  <div class="hero-content">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you</p>
+  </div>
 </section>
 
 <main>
-  <p>Have questions or want to learn more about our services? Fill out the form below and we’ll get back to you promptly.</p>
+  <p>Have questions or want to learn more about our services? Fill out the form below and we’ll get back to you promptly.</p>
 
-  <form id="contact-form" action="https://formspree.io/f/mjkopddq" method="POST">
-    <div>
-      <label for="name">Your Name*</label>
-      <input type="text" id="name" name="name" required />
-    </div>
-    <div>
-      <label for="phone">Phone Number*</label>
-      <input type="tel" id="phone" name="phone" required />
-    </div>
-    <div>
-      <label for="email">Your Email*</label>
-      <input type="email" id="email" name="_replyto" required />
-    </div>
-    <div>
-      <label for="message">Your Message*</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit">Send Message</button>
-  </form>
+  <form id="contact-form" action="https://formspree.io/f/mjkopddq" method="POST">
+    <div>
+      <label for="name">Your Name*</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="phone" required />
+    </div>
+    <div>
+      <label for="email">Your Email*</label>
+      <input type="email" id="email" name="_replyto" required />
+    </div>
+    <div>
+      <label for="message">Your Message*</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
 </main>
 
 <footer>
-  &copy; 2025 Ramro Home Care LLC. All rights reserved.
+  &copy; 2025 Ramro Home Care LLC. All rights reserved.
 </footer>
 
 </body>
