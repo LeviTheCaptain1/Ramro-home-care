@@ -1,207 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ramro Home Care LLC – Compassionate Non-Medical Home Care</title>
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0; padding: 0;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f7fafc;
-    color: #333;
-    line-height: 1.7;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramro Home Care LLC – Compassionate Non-Medical Home Care</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  a:hover, a:focus {
-    text-decoration: underline;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  header {
-    background: linear-gradient(90deg, #3b82f6, #2563eb);
-    color: white;
-    padding: 40px 20px 30px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  header p {
-    font-size: 1.3rem;
-    max-width: 650px;
-    margin: 0 auto;
-    font-weight: 500;
-    opacity: 0.95;
-  }
-
-  nav {
-    background: #2563eb;
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    padding: 12px 0;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  }
-  nav a {
-    color: white;
-    padding: 12px 28px;
-    font-weight: 600;
-    border-radius: 6px 6px 0 0;
-    font-size: 1.05rem;
-  }
-  nav a:hover, nav a.active {
-    background-color: #1e40af;
-    color: #a5b4fc;
-  }
-
-  .hero {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1588776814546-c03f42e39f0d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.65);
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(38, 78, 162, 0.75);
-    z-index: 0;
-  }
-  .hero > * {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .hero h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  .hero p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px;
-    flex-grow: 1;
-  }
-
-  h2 {
-    color: #2563eb;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 700;
-    border-bottom: 3px solid #3b82f6;
-    padding-bottom: 10px;
-  }
-
-  .services p {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.8;
-  }
-
-  .about {
-    margin-top: 50px;
-    background: white;
-    padding: 30px 25px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  }
-
-  .about p + p {
-    margin-top: 18px;
-  }
-
-  footer {
-    background: #1e40af;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    font-size: 1rem;
-    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
-  }
-  footer a {
-    color: #a5b4fc;
-    font-weight: 600;
-  }
-  footer a:hover {
-    color: white;
-  }
-
-  @media (max-width: 600px) {
-    nav {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7fafc;
+      color: #333;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 15px 0;
     }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: white;
+      padding: 40px 20px 30px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: #2563eb;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 12px 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 6px 6px 0 0;
+      font-size: 1.05rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #1e40af;
+      color: #a5b4fc;
+    }
+
     .hero {
-      font-size: 1.1rem;
-      padding: 70px 20px;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1588776814546-c03f42e39f0d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
     }
-  }
-</style>
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(38, 78, 162, 0.75);
+      z-index: 0;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 10px;
+    }
+
+    .services p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .about {
+      margin-top: 50px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .about p + p {
+      margin-top: 18px;
+    }
+
+    footer {
+      background: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 1rem;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: #a5b4fc;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+      }
+
+      .hero {
+        font-size: 1.1rem;
+        padding: 70px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
-</header>
+  <header>
+    <h1>Ramro Home Care LLC</h1>
+    <p>Compassionate Non-Medical Home Care Services Tailored for Your Loved Ones</p>
+  </header>
 
-<nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="contact.html">Contact Us</a>
-</nav>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
 
-<section class="hero" role="banner" aria-label="Home Care Support">
-  <h2>Empowering Seniors to Live Comfortably at Home</h2>
-  <p>Your trusted partner for compassionate non-medical home care.</p>
-</section>
-
-<main>
-  <section class="services" aria-label="Our Home Care Services">
-    <h2>Our Services</h2>
-    <p>
-      At Ramro Home Care LLC, we offer a range of compassionate, non-medical home care services tailored to each individual's needs. These include:
-      personal care assistance, companionship, medication reminders, meal preparation, light housekeeping, safe transportation, and 24/7 care. 
-      Our goal is to help your loved ones live safely and comfortably in their own home with dignity and independence.
-    </p>
+  <section id="home" class="hero" role="banner" aria-label="Home Care Support">
+    <h2>Empowering Seniors to Live Comfortably at Home</h2>
+    <p>Your trusted partner for compassionate non-medical home care.</p>
   </section>
 
-  <section class="about" aria-label="About Ramro Home Care LLC">
-    <h2>About Us</h2>
-    <p>
-      We believe everyone deserves to live with dignity and independence in their own home. Ramro Home Care LLC provides personalized support for seniors and individuals with daily living challenges.
-    </p>
-    <p>
-      Our carefully selected caregivers are trained and committed to delivering respectful, compassionate care. Whether you need short-term assistance or long-term support, we’re here to make life safer and more joyful for your loved ones.
-    </p>
-  </section>
-</main>
+  <main>
+    <section class="services" aria-label="Our Home Care Services">
+      <h2>Our Services</h2>
+      <p>
+        At Ramro Home Care LLC, we offer a range of compassionate, non-medical home care services tailored to each individual's needs.
+        These include: personal care assistance, companionship, medication reminders, meal preparation, light housekeeping,
+        safe transportation, and 24/7 care. Our goal is to help your loved ones live safely and comfortably in their own home
+        with dignity and independence.
+      </p>
+    </section>
 
-<footer>
-  &copy; 2025 Ramro Home Care LLC &nbsp;|&nbsp; <a href="contact.html">Contact Us</a>
-</footer>
+    <section class="about" aria-label="About Ramro Home Care LLC">
+      <h2>About Us</h2>
+      <p>
+        We believe everyone deserves to live with dignity and independence in their own home.
+        Ramro Home Care LLC provides personalized support for seniors and individuals with daily living challenges.
+      </p>
+      <p>
+        Our carefully selected caregivers are trained and committed to delivering respectful, compassionate care.
+        Whether you need short-term assistance or long-term support, we’re here to make life safer and more joyful for your loved ones.
+      </p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    &copy; 2025 Ramro Home Care LLC &nbsp;|&nbsp; <a href="#contact">Contact Us</a>
+  </footer>
 
 </body>
 </html>
