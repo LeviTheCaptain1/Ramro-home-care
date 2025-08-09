@@ -6,7 +6,6 @@
   <title>Contact Us - Ramro Home Care LLC</title>
 
   <style>
-    /* === SHARED STYLES START === */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f8fb;
@@ -71,10 +70,6 @@
       position: relative;
       z-index: 2;
     }
-    main p { font-size: 1.05rem; margin-bottom: 20px; }
-    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 10px; }
-    .members p { margin-bottom: 12px; }
-    .members strong { font-size: 1.1rem; }
     form label {
       display: block;
       margin-bottom: 6px;
@@ -169,10 +164,12 @@
     <input type="tel" id="phone" name="phone" required />
 
     <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email" required />
+    <input type="email" id="email" name="_replyto" required />
 
     <label for="message">Message *</label>
     <textarea id="message" name="message" required></textarea>
+
+    <input type="hidden" name="_subject" value="New contact form submission from Ramro Home Care" />
 
     <button type="submit">Send Message</button>
   </form>
@@ -190,7 +187,7 @@
   const form = document.getElementById('contact-form');
   const thankYouMessage = document.getElementById('thank-you-message');
 
-  form.addEventListener('submit', async function(e) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
