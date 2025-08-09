@@ -7,8 +7,7 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
     }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,7 +50,6 @@
       justify-content: center;
       gap: 35px;
       padding: 12px 0;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
     nav a {
       color: white;
@@ -66,14 +64,13 @@
     }
 
     .hero {
-      position: relative;
       background: url('https://images.unsplash.com/photo-1588776814546-c03f42e39f0d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       padding: 100px 20px;
       text-align: center;
       font-size: 1.3rem;
       font-weight: 500;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+      position: relative;
     }
     .hero::before {
       content: "";
@@ -104,36 +101,30 @@
       padding-bottom: 10px;
     }
 
+    .about, .contact-form {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      margin-top: 40px;
+    }
+
+    .about p + p, .services p + p {
+      margin-top: 18px;
+    }
+
     .services p {
       font-size: 1.1rem;
       color: #444;
       line-height: 1.8;
     }
 
-    .about {
-      margin-top: 50px;
-      background: white;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-
-    .about p + p {
-      margin-top: 18px;
-    }
-
-    .contact-section {
-      background: white;
-      padding: 40px 25px;
-      margin-top: 60px;
-      border-radius: 10px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-    }
     form label {
       display: block;
       margin-bottom: 6px;
       font-weight: 600;
     }
+
     form input, form textarea {
       width: 100%;
       padding: 12px 15px;
@@ -142,16 +133,13 @@
       border-radius: 6px;
       font-size: 1rem;
       font-family: inherit;
-      transition: border-color 0.3s ease;
     }
-    form input:focus, form textarea:focus {
-      border-color: #2a9df4;
-      outline: none;
-    }
+
     form textarea {
       resize: vertical;
       min-height: 120px;
     }
+
     button {
       background: #2a9df4;
       color: white;
@@ -161,11 +149,8 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
-    button:hover {
-      background: #1a6ddb;
-    }
+
     #thank-you-message {
       display: none;
       padding: 20px;
@@ -184,15 +169,12 @@
       text-align: center;
       padding: 25px 15px;
       font-size: 1rem;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
       margin-top: 60px;
     }
+
     footer a {
       color: #a5b4fc;
       font-weight: 600;
-    }
-    footer a:hover {
-      color: white;
     }
 
     @media (max-width: 600px) {
@@ -220,7 +202,7 @@
     <a href="#contact">Contact Us</a>
   </nav>
 
-  <section class="hero" id="home">
+  <section id="home" class="hero">
     Supporting independence and well-being with caring home assistance.
   </section>
 
@@ -244,9 +226,11 @@
       </p>
     </section>
 
-    <section class="contact-section" id="contact">
+    <section id="contact" class="contact-form" aria-label="Contact Us">
       <h2>Contact Us</h2>
-      <p>If you or a loved one are looking for compassionate, professional home care, please don’t hesitate to reach out. Fill out the form below, and a member of our team will respond within 24 hours.</p>
+      <p>
+        If you or a loved one are looking for compassionate, professional home care, please don’t hesitate to reach out. Fill out the form below, and a member of our team will respond within 24 hours.
+      </p>
 
       <form id="contact-form">
         <label for="firstName">First Name *</label>
@@ -256,4 +240,19 @@
         <input type="text" id="lastName" name="lastName" required />
 
         <label for="email">Email Address *</label>
-        <input type="email
+        <input type="email" id="email" name="_replyto" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+
+        <label for="zip">Zip Code</label>
+        <input type="text" id="zip" name="zip" />
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="thank-you-message">
+        Thank you for contacting us
