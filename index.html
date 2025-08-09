@@ -1,144 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ramro Home Care LLC</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f8fb;
-      color: #333;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #1976d2;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin-top: 8px; font-size: 1.1rem; }
-
-    nav {
-      background: #0d47a1;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px 4px 0 0;
-    }
-    nav a:hover, nav a.active { background-color: #1565c0; }
-
-    /* Hero Section with working image */
-    .hero {
-      position: relative;
-      background-image: url('https://images.pexels.com/photos/29494789/pexels-photo-29494789.jpeg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; bottom: 0; right: 0;
-      background-color: rgba(0,0,0,0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
-    .hero-content h2 { margin: 0 0 10px; font-size: 2.4rem; }
-    .hero-content p { margin: 0; font-size: 1.15rem; }
-
-    main {
-      max-width: 700px;
-      margin: -100px auto 40px;
-      background: white;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-      position: relative;
-      z-index: 2;
-    }
-    main p { font-size: 1.05rem; margin-bottom: 20px; }
-    h3 { color: #1565c0; margin-top: 30px; margin-bottom: 10px; }
-
-    .members p { margin-bottom: 12px; }
-    .members strong { font-size: 1.1rem; }
-
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 60px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 650px) {
-      .hero { height: 200px; }
-      .hero-content h2 { font-size: 1.9rem; }
-      main { margin: -80px 10px 30px; padding: 20px 15px; }
-      nav { flex-wrap: wrap; gap: 10px; padding: 0 0 10px; }
-      nav a { padding: 10px; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramro Home Care LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <h1>Ramro Home Care LLC</h1>
-  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
+  <h1>Ramro Home Care LLC</h1>
+  <p>Compassionate Non-Medical Home Care Services for Your Loved Ones</p>
 </header>
 
 <nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="contact.html">Contact Us</a>
+  <a href="index.html" class="active">Home</a>
+  <a href="contact.html">Contact Us</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Care That Feels Like Home</h2>
-    <p>Warm, dignified home care inspired by Nepali warmth.</p>
-  </div>
+  <div class="hero-content">
+    <h2>Care That Feels Like Home</h2>
+    <p>Warm, dignified home care inspired by Nepali warmth.</p>
+  </div>
 </section>
 
 <main>
-  <p>
-    We believe everyone deserves to live with dignity, comfort, and independence in their own home. Ramro Home Care LLC offers personalized non-medical support for seniors and individuals needing daily assistance.
-  </p>
+  <p>
+    We believe everyone deserves to live with dignity, comfort, and independence in their own home. Ramro Home Care LLC offers personalized non-medical support for seniors and individuals needing daily assistance.
+  </p>
 
-  <section class="members">
-    <h3>Managing Members</h3>
-    <p><strong>Mukti Katel</strong><br />
-      Phone: <a href="tel:5156391858">515‑639‑1858</a><br />
-      Email: <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a>
-    </p>
+  <section class="members">
+    <h3>Managing Members</h3>
+    <p><strong>Mukti Katel</strong><br />
+      Phone: <a href="tel:5156391858">515-639-1858</a><br />
+      Email: <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a>
+    </p>
 
-    <p><strong>Kailash Gajmer</strong><br />
-      Phone: <a href="tel:5039336975">503‑933‑6975</a><br />
-      Email: <a href="mailto:gajmerkailash@gmail.com">gajmerkailash@gmail.com</a>
-    </p>
-  </section>
+    <p><strong>Kailash Gajmer</strong><br />
+      Phone: <a href="tel:5039336975">503-933-6975</a><br />
+      Email: <a href="mailto:gajmerkailash@gmail.com">gajmerkailash@gmail.com</a>
+    </p>
+  </section>
 </main>
 
 <footer>
-  &copy; 2025 Ramro Home Care LLC. All rights reserved.
+  &copy; 2025 Ramro Home Care LLC. All rights reserved.
 </footer>
 
 </body>
