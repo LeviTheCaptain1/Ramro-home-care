@@ -195,17 +195,19 @@
 </footer>
 
 <script>
+  // Attach the submit event to the form
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent the form from submitting the default way
-    
-    // Simulate form submission success (You can replace this with actual form submission code)
-    // Normally, you'd use AJAX to submit form data without a page reload
+    // We do not prevent the form from submitting because we want Formspree to handle it
+    // Show success message immediately after form submission
+    document.getElementById('success-message').style.display = 'block';
+
+    // Optionally, hide the success message after a few seconds, and reset the form
     setTimeout(function() {
-      // Show success message
-      document.getElementById('success-message').style.display = 'block';
-      // Clear form fields
+      // Hide the success message after 5 seconds
+      document.getElementById('success-message').style.display = 'none';
+      // Reset the form fields
       document.getElementById('contact-form').reset();
-    }, 1000);  // Simulate a slight delay before showing the success message
+    }, 5000); // 5 seconds delay
   });
 </script>
 
